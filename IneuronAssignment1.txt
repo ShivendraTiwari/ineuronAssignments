@@ -1,0 +1,43 @@
+1.Write a program to find whether a given year is a leap year or not.
+
+function findLeapYear(n){
+    if((n%4===0&&n%100===0)||(n%400===0)){
+        console.log("year is leap year");
+    }
+    else{
+        console.log("year is not leap year");
+    }
+}
+// const year=prompt("Desired Year")
+findLeapYear(1998)
+
+2.Write a JavaScript program to convert temperatures to and from Celsius,
+Fahrenheit.
+
+function celsiusToFahre(celsius) 
+{
+  const celTemp = celsius;
+  const celToFahr = celTemp * 9 / 5 + 32;
+  const printOutput = `${celTemp}C is ${celToFahr}F.`;
+    console.log(printOutput);
+}
+
+function fahreToCelsius(fahrenheit) 
+{
+  const fahrTemp = fahrenheit;
+  const fahrToCel = (fahrTemp - 32) * 5 / 9;
+  const printOutput = `${fahrTemp}F is ${fahrToCel}C.`;
+    console.log(printOutput);
+} 
+celsiusToFahre(60);
+fahreToCelsius(45);
+
+3.Write a program to find the factorial of a number.
+function findFactorial(n){
+    fact=1;
+    for(i=1;i<=n;i++){
+     fact=fact*i   
+    }
+    console.log(fact)
+}
+findFactorial(10)
