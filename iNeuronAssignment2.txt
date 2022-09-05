@@ -1,0 +1,53 @@
+//1.printing star pattern
+
+function printingStarPattern(){
+    let star='\n';
+    for(i=1;i<=5;i++){
+        for(j=1;j<=i;j++){
+            // console.log(j)
+            star+=j
+        }
+        star += "\n";
+    }
+    console.log(star)
+}
+printingStarPattern()
+
+//2.check for armstrong Number
+
+const findArmStrongNumber=(myNum)=>{
+    let myArr=String(myNum).split("").map((item)=>Number(item));
+    const sum=myArr.reduce((acc,n)=>acc+Math.pow(n,3))
+    console.log(sum)
+    if(sum===myNum){
+    console.log("Number is Armstrong Number")
+    }
+    else{
+    console.log("Number is not Armstrong Number")
+    }
+}
+let num =153;
+const armstrongNumber=findArmStrongNumber(num)
+
+//3.special number
+const findFactorialNumber=(num)=>{
+   let fact=1;
+   let finalSum=0;
+   let stringToArray=String(num).split("").map((item)=>Number(item))
+   for(i=0;i<stringToArray.length;i++){
+    let fact=1;
+    while(stringToArray[i]>=1){
+        fact=fact*stringToArray[i];
+         stringToArray[i]--;
+    }   
+    finalSum+=fact;
+   }
+   if(finalSum==num){
+    console.log(`sum is ${finalSum} so ${num} is a special Number`)   
+   }
+   else{
+       console.log(`sum is ${finalSum}, so ${num} is not a special Number`)
+   }
+    
+}
+const mmyFactorialNumber=findFactorialNumber(145)
